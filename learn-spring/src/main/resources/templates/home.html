@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+<!-- Header -->
+<header class="bg-gray-900 text-white">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+        <div class="text-2xl font-bold"><span th:text="${appName}"></span></div>
+<!--        <h1>App: <span th:text="${appName}"></span></h1>-->
+        <ul class="flex space-x-6">
+            <li><a href="#home" class="hover:text-yellow-500">Home</a></li>
+            <li><a href="#about" class="hover:text-yellow-500">About</a></li>
+            <li><a href="#services" class="hover:text-yellow-500">Services</a></li>
+            <li><a href="#contact" class="hover:text-yellow-500">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="bg-cover bg-center h-screen text-white flex items-center justify-center" style="background-image: url('https://source.unsplash.com/random/1600x900');">
+    <div class="text-center px-6">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Bene</h1>
+        <p class="text-xl mb-6">Your one-stop solution for web development</p>
+        <a href="/login" class="bg-yellow-500 text-white py-2 px-6 rounded-full hover:bg-yellow-600 transition duration-300">Login</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-center py-4 mt-auto">
+    <p>&copy; 2024 Bene. All rights reserved.</p>
+</footer>
+</body>
+</html>

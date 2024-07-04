@@ -1,0 +1,11 @@
+### GET request to example server
+POST http://localhost:8080/api/accounts
+Content-Type: application/json
+
+{
+  "accountNumber": "123123",
+  "balance": -10000
+}
+
+### Get
+GET http://localhost:8080/api/accounts

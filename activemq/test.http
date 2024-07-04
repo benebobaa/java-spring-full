@@ -1,0 +1,13 @@
+### GET request to example server
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+### POST
+
+POST http://localhost:8080/api/send-email
+Content-Type: application/json
+
+{
+  "to": "bene",
+  "from": "budi"
+}

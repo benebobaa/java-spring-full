@@ -1,0 +1,22 @@
+
+### POST DATA
+
+POST http://localhost:8080/api/blog/saveOwner
+Content-Type: application/json
+
+{
+  "name": "Budi",
+  "email": "budi_blablabla@gmail.com",
+  "blogList" :[
+    {
+      "title":"Introduction to Java Fundamental",
+      "category": "JAVA",
+      "content": "Java JDK 17, 00P"
+    },
+    {
+      "title": "Spring Boot 3",
+      "category": "JAVA",
+      "content": "Create REST-API"
+    }
+  ]
+}

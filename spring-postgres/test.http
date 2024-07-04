@@ -1,0 +1,32 @@
+### GET request to example server
+GET http://localhost:8080/demo/all
+
+### GET request to example server
+GET http://localhost:8080/demo/reverse
+
+### POST request
+POST http://localhost:8080/demo/add?name=aril&email=bene@gmail.com
+
+### GET request to example server
+GET http://localhost:8080/demo/reverse
+
+
+### GET request to example server
+GET http://localhost:8080/demo/findUserLike?email=be
+
+### GET request to example server
+GET http://localhost:8080/products
+
+###
+POST http://localhost:8080/products/generate
+
+### GET
+GET http://localhost:8080/products/all
+
+### GET PAGINATION
+GET http://localhost:8080/products/allp?page=0&size=10
+
+
+### GET SEARCH
+GET http://localhost:8080/products/search?name=ca
+

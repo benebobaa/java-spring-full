@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/random"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"type\":\"success\",\"value\":{\"id\":12,\"quote\":\"@springboot with @springframework is pure productivity! Who said in #java one has to write double the code than in other langs? #newFavLib\"}}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPattern": "/smsgateway"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "sms_gateway_response.json",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "delayDistribution": {
+      "type": "uniform",
+      "lower": 10,
+      "upper": 25
+    }
+  }
+}

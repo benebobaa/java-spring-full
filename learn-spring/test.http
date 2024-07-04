@@ -1,0 +1,34 @@
+### Create a book
+POST http://localhost:8081/api/books
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Banda Neira3",
+  "author": "Bene2"
+}
+
+### Get all books
+GET http://localhost:8081/api/books
+Accept: application/json
+Content-Type: application/json
+
+### Get by id book
+GET http://localhost:8081/api/books/1
+Accept: application/json
+Content-Type: application/json
+
+### Delete by id book
+DELETE http://localhost:8081/api/books/2
+Accept: application/json
+Content-Type: application/json
+
+### Update a book
+PUT http://localhost:8081/api/books/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Banda Neira Updated",
+  "author": "Bene Updated"
+}

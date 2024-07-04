@@ -1,0 +1,17 @@
+### GET
+GET http://localhost:8080/api/books
+
+
+### POST
+POST http://localhost/api/books
+Content-Type: application/json
+
+{
+  "title" : "coba",
+  "description": "coba 123"
+}
+
+
+### Get NotFound
+GET http://localhost:8080/api/books/2
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="p-6 px-6 flex">
+    <a href="/books/form" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Add Book</a>
+    <form th:action="@{/books}" method="get" class="flex items-center px-4">
+        <input type="text" name="query" placeholder="Search books" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        <button type="submit" class="ml-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Search</button>
+    </form>
+</div>
+<div class="mx-6 relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+            <th scope="col" class="px-6 py-3">Title</th>
+            <th scope="col" class="px-6 py-3">Author</th>
+            <th scope="col" class="px-6 py-3">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="book : ${books}" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" th:text="${book.title}"></th>
+            <td class="px-6 py-4" th:text="${book.author}"></td>
+            <td class="px-6 py-4 flex space-x-4">
+                <a th:href="@{/books/form/{id}(id=${book.id})}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                <form th:action="@{/books/delete/{id}(id=${book.id})}" method="post">
+                    <button type="submit" class="font-medium text-red-600 dark:text-red-500 hover:underline">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
